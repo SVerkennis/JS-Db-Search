@@ -10,15 +10,35 @@
 
 <body>
 
-<button id="addUser" style="background-color: #6C5B7B; color:white; border-radius: 3px; height: 50px; border:none;">add user</button>
-<button id="undoUser" style="background-color: #C06C84; color:white; border-radius: 3px; height: 50px; border:none;">delete last add-user</button>
-<button id="findUsername" style="background-color: #F8B195; color:white; border-radius: 3px; height: 50px; border:none;">find username</button>
-<button id="findUserId" style="background-color: #F67280; color:white; border-radius: 3px; height: 50px; border:none;">find userid</button>
-<button id="searchButton" style="background-color: #6C5B7B; color:white; border-radius: 3px; height: 50px; border:none;">search DB</button>
+<!-- <button id="addUserButton" style="background-color: #6C5B7B; color:white; border-radius: 3px; height: 50px; border:none;">add user</button> -->
+<button id="undoUser" style="background-color: #C06C84; color:white; border-radius: 3px; height: 40px; border:none;margin-top: 20px; margin-bottom: 10px;">delete last add-user</button>
+<button id="findUsernameButton" style="background-color: #F8B195; color:white; border-radius: 3px; height: 40px; border:none;">find username</button>
+<!-- <button id="findUserId" style="background-color: #F67280; color:white; border-radius: 3px; height: 50px; border:none;">find userid</button> -->
+<button id="searchButton" style="background-color: #6C5B7B; color:white; border-radius: 3px; height: 40px; border:none; margin-top: 5px;">search DB</button>
 
 
+<form name="addUserForm">
+    <label for="userIdInput" style="font-family: arial; margin-bottom: 10px; color: #1C2833;">
+        UserID
+        <input id="userIdInput" placeholder="Enter UserID" type="text" style="margin-bottom: 10px;"/>
+    </label>
+<br>
+    <label for="userNameInput" style="font-family: arial; color: #1C2833;">
+          Username
+         <input id="userNameInput" type="text" placeholder="Enter UserName"/>
+    </label>
+</form>
 
-</body>
+<br>
+
+    <label for="userSubscribe" style="font-family: arial;">
+        Subscribe to our newsletter?
+        <input id="userSubscribe" type="checkbox">
+    </label>
+
+<button id="addUserButton" style="background-color: #99B898; border-radius: 3px; color:white; border:none; margin-bottom: 10px ;width: 70px; height: 22px;">Add user</button>
 
 <script src="index.js"></script>
+
+</body>
 </html>
