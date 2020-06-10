@@ -13,6 +13,9 @@ searchButton.addEventListener("click", () => searchDb(getSearchValue()));
 
 const userNameInput = document.getElementById("userNameInput");
 const userIdInput = document.getElementById("userIdInput");
+const userSubscribe = document.getElementById("userSubscribe");
+
+
 
 // const findUserUsingFilterMethodButton = document.getElementById("findUserUsingFilterMethod");
 // findUserUsingFilterMethodButton.addEventListener("click", () => findUserUsingFilterMethod(getSearchValue()));
@@ -22,18 +25,22 @@ const userDb = [
     {
         id: 1234,
         name: "Sabine",
+        subscribed: true
     },
     {
         id: 2345,
         name: "Nina",
+        subscribed: true
     },
     {
         id: 5145,
         name: "Aladin",
+        subscribed: false
     },
     {
         id: 1924,
         name: "Heidi",
+        subscribed: false
     }];
 
 
@@ -41,6 +48,11 @@ function addUser() {
     let newUser = {};
     newUser.id = Number(userIdInput.value);
     newUser.name = userNameInput.value;
+
+    userNameInput.value = "";
+    userIdInput.value = "";
+    newUser.subscribed = userSubscribe.checked;
+
     userDb.push(newUser);
     console.log(userDb);
 
